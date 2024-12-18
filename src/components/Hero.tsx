@@ -14,7 +14,7 @@ const Hero = () => {
                         <h1 data-aos="fade-right" className="text-[#c4cfdf] mb-[1.3rem]">WELCOME TO MY WORLD</h1>
                         <div>
                             <h1 data-aos="fade-left" data-aos-delay="200" className="xl-text-[50px] lg:text-[40px] sm:text-[35px] text-[25px] font-bold leading-[2.6rem] text-white">
-                                Hi, I'm <span className="text-yellow-300">Viet</span>
+                                Hi, I&apos;m <span className="text-yellow-300">Viet</span>
                             </h1>
 
                             <TypeWriteEffect />
