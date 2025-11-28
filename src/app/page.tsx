@@ -1,16 +1,18 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import About from "@/components/About";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import NavMobile from "@/components/NavMobile";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Footer from "@/components/Footer";
 import Project from "@/components/Project";
-import React, { useState, useEffect } from "react";
+import Services from "@/components/Services";
 import Skills from "@/components/Skills";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const HomePage = () => {
     const [showNav, setshowNav] = useState(false);
@@ -20,7 +22,7 @@ const HomePage = () => {
     useEffect(() => {
         AOS.init({
             duration: 600,
-            easing: 'ease',
+            easing: "ease",
         });
     }, []);
 

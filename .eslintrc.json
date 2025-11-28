@@ -1,3 +1,55 @@
 {
-  "extends": "next/core-web-vitals"
+    "root": true,
+    "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+    "ignorePatterns": [
+        ".next/**",
+        "node_modules/**",
+        "dist/**",
+        "build/**",
+        "coverage/**",
+        "public/**"
+    ],
+    "plugins": ["@typescript-eslint", "prettier", "unused-imports", "react-hooks"],
+    "rules": {
+        "prettier/prettier": "warn",
+        "no-alert": "off",
+        "camelcase": "off",
+        "no-console": "off",
+        "no-unused-vars": "off",
+        "no-param-reassign": "off",
+        "no-underscore-dangle": "off",
+        "no-restricted-exports": "off",
+
+        "react/no-children-prop": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/no-array-index-key": "off",
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/function-component-definition": "off",
+        "react/jsx-no-useless-fragment": ["warn", { "allowExpressions": true }],
+        "react/no-unstable-nested-components": ["warn", { "allowAsProps": true }],
+        "react/jsx-no-duplicate-props": ["warn", { "ignoreCase": false }],
+
+        "jsx-a11y/anchor-is-valid": "off",
+        "jsx-a11y/control-has-associated-label": "off",
+
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-unused-vars": ["warn", { "args": "none" }],
+        "@typescript-eslint/no-explicit-any": "off",
+
+        "unused-imports/no-unused-imports": "warn",
+        "unused-imports/no-unused-vars": [
+            "warn",
+            {
+                "vars": "all",
+                "varsIgnorePattern": "^_",
+                "args": "after-used",
+                "argsIgnorePattern": "^_"
+            }
+        ],
+
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+    }
 }

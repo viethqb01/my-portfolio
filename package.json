@@ -1,34 +1,62 @@
 {
-  "name": "my-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@heroicons/react": "^2.2.0",
-    "aos": "^3.0.0-beta.6",
-    "next": "14.2.4",
-    "react": "^18",
-    "react-countup": "^6.5.3",
-    "react-dom": "^18",
-    "react-icons": "^5.4.0",
-    "react-type-animation": "^3.2.0",
-    "three": "^0.165.0",
-    "vanta": "^0.5.24"
-  },
-  "devDependencies": {
-    "@types/aos": "^3.0.7",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  }
+    "name": "my-portfolio",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+        "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+        "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "type-check": "tsc --noEmit",
+        "lint-staged": "lint-staged",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "@heroicons/react": "^2.2.0",
+        "aos": "^3.0.0-beta.6",
+        "next": "14.2.4",
+        "react": "^18",
+        "react-countup": "^6.5.3",
+        "react-dom": "^18",
+        "react-icons": "^5.4.0",
+        "react-type-animation": "^3.2.0",
+        "three": "^0.165.0",
+        "vanta": "^0.5.24"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^6.0.0",
+        "@types/aos": "^3.0.7",
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "@typescript-eslint/eslint-plugin": "^7.18.0",
+        "@typescript-eslint/parser": "^7.18.0",
+        "eslint": "^8",
+        "eslint-config-next": "14.2.4",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.4",
+        "eslint-plugin-unused-imports": "^4.3.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.2.7",
+        "postcss": "^8",
+        "prettier": "^3.7.1",
+        "prettier-plugin-tailwindcss": "^0.7.1",
+        "tailwindcss": "^3.4.1",
+        "typescript": "5.4"
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "npm run lint:fix",
+            "npm run format",
+            "git add ."
+        ],
+        "*.{json,css,md}": [
+            "npm run format",
+            "git add ."
+        ]
+    }
 }

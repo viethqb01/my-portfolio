@@ -1,28 +1,29 @@
 import React from "react";
+
 import SkillCard from "./Helpers/SkillCard";
 
 const Skills = () => {
     return (
-        <div id="blog-skills" className="pt-[5rem] pb-[3rem] bg-black">
-            <div className="grid w-[80%] mx-auto grid-cols-1 lg:grid-cols-7 gap-[2rem] items-center">
+        <div id="blog-skills" className="bg-black pb-[3rem] pt-[5rem]">
+            <div className="mx-auto grid w-[80%] grid-cols-1 items-center gap-[2rem] lg:grid-cols-7">
                 <div className="col-span-3">
                     <p className="heading__mini">My Skills</p>
                     <h1 className="heading__primary">
-                        Let&apos;s Explor Popular <span className="text-yellow-300">Skills</span>{" "}
-                        & Experience
+                        Let&apos;s Explor Popular <span className="text-yellow-300">Skills</span> &
+                        Experience
                     </h1>
-                    <p className="text-[15px] mb-[1.5rem] text-white opacity-70 mt-[1.5rem]">
-                        As someone who loves to experience new technologies, I have learned
-                        and had access to many programming languages ​​and technologies that
-                        are very popular at the moment.
+                    <p className="mb-[1.5rem] mt-[1.5rem] text-[15px] text-white opacity-70">
+                        As someone who loves to experience new technologies, I have learned and had
+                        access to many programming languages ​​and technologies that are very
+                        popular at the moment.
                     </p>
-                    <button className="relative flex h-[50px] w-40 items-center justify-center font-semibold overflow-hidden bg-red-500 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-blue-600 before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56">
+                    <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-red-500 font-semibold text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-blue-600 before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56">
                         <span className="relatve z-10">Learn More</span>
                     </button>
                 </div>
 
                 <div className="col-span-4">
-                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-[1rem] items-center">
+                    <div className="grid grid-cols-2 items-center gap-[1rem] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5">
                         <div>
                             <SkillCard title="PHP" image="/images/php.png" />
                         </div>
@@ -48,8 +49,7 @@ const Skills = () => {
                         </div>
 
                         <div>
-                            <SkillCard title="React" image="/images/react.svg"
-                            />
+                            <SkillCard title="React" image="/images/react.svg" />
                         </div>
 
                         <div>
