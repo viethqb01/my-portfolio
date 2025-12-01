@@ -29,7 +29,7 @@ const Hero = () => {
                             <p
                                 data-aos="fade-up"
                                 data-aos-delay="400"
-                                className="mt-[1.2rem] text-[14px] text-[#c4cfdf] md:text-[16px]"
+                                className="mt-[1.2rem] text-justify text-[14px] text-[#c4cfdf] md:text-[16px]"
                             >
                                 I am a Software Engineer with 6 years of experience, specializing in
                                 PHP and React, Next.js, and I am also able to work with Golang,
