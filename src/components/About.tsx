@@ -60,6 +60,15 @@ const About = () => {
                             <CheckIcon className="h-[2rem] w-[2rem] text-yellow-400" />
                             <p className="text-[18px] text-white">Software Engineer</p>
                         </div>
+
+                        <div
+                            data-aos="zoom-in"
+                            data-aos-delay="200"
+                            className="flex items-center space-x-4"
+                        >
+                            <CheckIcon className="h-[2rem] w-[2rem] text-yellow-400" />
+                            <p className="text-[18px] text-white">Freelancer</p>
+                        </div>
                     </div>
                 </div>
 

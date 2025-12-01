@@ -32,10 +32,12 @@ const Hero = () => {
                                 className="mt-[1.2rem] text-[14px] text-[#c4cfdf] md:text-[16px]"
                             >
                                 I am a Software Engineer with 6 years of experience, specializing in
-                                PHP and React, Next.js, and also proficient in Golang, Angular, and
-                                Vue.js. I have experience developing complex systems, including
-                                payment gateways, e-wallets, POS solutions, and e-learning
-                                platforms. I am eager to work in a challenging environment that
+                                PHP and React, Next.js, and I am also able to work with Golang,
+                                Angular, and Vue.js. I have worked on developing complex systems
+                                such as payment gateways, e-wallets, POS solutions, and e-learning
+                                platforms. In addition, I am currently working as a freelancer,
+                                supporting various clients in building and developing their web
+                                projects. I am eager to work in a challenging environment that
                                 encourages continuous learning and personal growth, and I am
                                 passionate about building high-quality, scalable, and efficient
                                 solutions.

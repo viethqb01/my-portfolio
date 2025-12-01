@@ -50,14 +50,14 @@ const Footer = () => {
                     <div className="mt-[1rem] flex items-center space-x-2">
                         <MapIcon className="h-[1rem] w-[1rem] text-yellow-300" />
                         <p className="text-[q7px] font-normal text-white opacity-75">
-                            Phu Do, Nam Tu Liem, Ha Noi
+                            Nam Tu Liem, Ha Noi
                         </p>
                     </div>
 
                     <div className="mt-[1rem] flex items-center space-x-2">
                         <EnvelopeIcon className="h-[1rem] w-[1rem] text-yellow-300" />
                         <p className="text-[q7px] font-normal text-white opacity-75">
-                            viethqb@gmail.com
+                            viethqb01@gmail.com
                         </p>
                     </div>
 
@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
 
             <div className="mx-auto mt-[1.4rem] w-[80%] text-[14px] text-white opacity-70">
-                &#169; Copyright viethqb 2024
+                &#169; 2024 viethqb
             </div>
         </div>
     );

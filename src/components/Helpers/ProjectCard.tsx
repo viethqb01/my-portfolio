@@ -9,9 +9,10 @@ interface Props {
     image: string;
     techs: string[];
     link: string;
+    position?: string;
 }
 
-const ProjectCard = ({ image, title, description, techs, link }: Props) => {
+const ProjectCard = ({ image, title, description, techs, link, position }: Props) => {
     return (
         <div className="mx-auto grid w-[80%] grid-cols-1 items-start gap-10 pt-[5rem] lg:grid-cols-2">
             <div
@@ -84,7 +85,7 @@ const ProjectCard = ({ image, title, description, techs, link }: Props) => {
                     data-aos-delay="250"
                     className="mt-[0.5rem] cursor-pointer text-yellow-400"
                 >
-                    Fullstack Developer
+                    {position}
                 </p>
             </div>
         </div>

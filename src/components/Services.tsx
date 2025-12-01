@@ -14,29 +14,30 @@ const Services = () => {
         {
             title: "Golang",
             num: "02",
-            description: "Golang is the next language I am learning and working on.",
-            note: "Background: Payment Link, E-wallet, SmartPOS",
+            description:
+                "Golang is also a backend language that I am learning and working with. I started learning it after two years of working, and I use it to develop core services for payment gateway systems and e-wallet platforms.",
+            note: "Background: Payment Gateway, Payment Link, E-wallet, SmartPOS",
         },
         {
             title: "React",
             num: "03",
             description:
-                "Besides Backend, I also love Frontend. React is also the main language in my work.",
+                "React is also one of my main technologies. I started working with React early in my career and have continued using it across many of my projects.",
             note: "Background: Payment Gateway, Payment Link, CMS",
         },
         {
-            title: "Nextjs",
+            title: "Next.js",
             num: "04",
             description:
                 "NextJS is an open source framework built on top of React, allowing us to build super fast and user-friendly static websites.",
             note: "Background: New site, My Pofolio",
         },
         {
-            title: "Vuejs",
+            title: "Angular/Vue.js",
             num: "05",
             description:
-                "Vuejs is also a very popular farmeword, I have also done some big projects on it.",
-            note: "Background: Building Management VTV, E-learning",
+                "Vue.js and Angular are the frameworks I mainly use when taking on freelancer projects for clients. I have also completed several large-scale projects using these technologies.",
+            note: "Background: Multiple project freelancer",
         },
         {
             title: "Bug Fixing",
