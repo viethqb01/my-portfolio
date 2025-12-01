@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <div
             id="blog-hero"
-            className="custom-bg h-[85vh] w-[100vw] pt-[4vh] md:h-[100vh] md:pt-[12vh]"
+            className="custom-bg w-[100vw] pb-[4vh] pt-[8vh] md:h-[100vh] md:pt-[12vh]"
         >
             <div className="mx-auto flex h-[100%] w-[80%] flex-col justify-center">
                 <div className="grid grid-cols-1 items-center gap-[3rem] md:grid-cols-2">
