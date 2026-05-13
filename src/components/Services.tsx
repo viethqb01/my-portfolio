@@ -110,7 +110,7 @@ const Services = () => {
                         key={index}
                         data-aos="fade-up"
                         data-aos-delay={index * 80}
-                        className="border-white/8 group rounded-2xl border bg-[#0f1019] p-6 transition-all duration-300 hover:border-yellow-300/30 hover:bg-[#13141f]"
+                        className="group rounded-2xl border border-yellow-300/20 bg-yellow-300/5 p-6 transition-all duration-300 hover:border-yellow-300/30 hover:bg-yellow-300/10"
                     >
                         <div className="mb-4 flex items-center gap-3">
                             <span className="text-3xl">{item.icon}</span>
