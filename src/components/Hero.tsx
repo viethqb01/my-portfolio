@@ -176,7 +176,7 @@ const Hero = () => {
                     <div
                         data-aos="fade-left"
                         data-aos-delay="200"
-                        className="hidden flex-col items-center gap-6 md:flex"
+                        className="flex flex-col items-center gap-6"
                     >
                         {/* Avatar */}
                         <div className="relative">
