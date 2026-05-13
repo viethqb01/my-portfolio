@@ -193,7 +193,7 @@ const Hero = () => {
                         {/* Code editor */}
                         <div className="w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0d1117] shadow-[0_0_40px_rgba(253,224,71,0.04)]">
                             {/* Title bar */}
-                            <div className="border-white/8 flex items-center justify-between border-b bg-[#161b22] px-4 py-2.5">
+                            <div className="border-white/8 flex items-center justify-between border-b bg-[#161b22] px-3 py-2 md:px-4 md:py-2.5">
                                 <div className="flex items-center gap-1.5">
                                     <span className="h-3 w-3 rounded-full bg-red-500/80" />
                                     <span className="h-3 w-3 rounded-full bg-yellow-500/80" />
@@ -208,12 +208,12 @@ const Hero = () => {
                             </div>
 
                             {/* Code */}
-                            <div className="h-[270px] overflow-auto p-5 font-mono text-[13px] leading-7">
+                            <div className="h-[180px] overflow-auto p-2 font-mono text-[8px] leading-5 md:h-[270px] md:p-5 md:text-[13px] md:leading-7">
                                 {typedLines.map((line, i) => {
                                     const isLast = i === typedLines.length - 1;
                                     return (
                                         <div key={i} className="flex">
-                                            <span className="mr-4 w-4 select-none text-right text-gray-600">
+                                            <span className="mr-2 w-3 select-none text-right text-gray-600 md:mr-4 md:w-4">
                                                 {i + 1}
                                             </span>
                                             <span className="whitespace-pre">
@@ -228,7 +228,7 @@ const Hero = () => {
                             </div>
 
                             {/* Status bar */}
-                            <div className="border-white/8 flex items-center justify-between border-t bg-[#161b22] px-4 py-2">
+                            <div className="border-white/8 flex items-center justify-between border-t bg-[#161b22] px-3 py-1.5 md:px-4 md:py-2">
                                 <span className="font-mono text-[10px] text-gray-600">
                                     Ln {typedLines.length}, Col{" "}
                                     {(typedLines.at(-1)?.length ?? 0) + 1}
