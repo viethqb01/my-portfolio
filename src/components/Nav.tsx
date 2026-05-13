@@ -15,6 +15,7 @@ const Nav = ({ openNav }: Props) => {
             { id: "blog-hero", name: "Home" },
             { id: "blog-about", name: "About" },
             { id: "blog-skills", name: "Skills" },
+            { id: "work-experience", name: "Experience" },
             { id: "blog-services", name: "Service" },
             { id: "blog-project", name: "Project" },
             { id: "blog-footer", name: "Contact" },
