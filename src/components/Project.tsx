@@ -62,8 +62,10 @@ const Project = () => {
     return (
         <div id="blog-project" className="bg-[#080910] pb-[5rem] pt-[5rem]">
             <div className="text-center">
-                <p className="heading__mini">Recent Works</p>
-                <h1 className="heading__primary">
+                <p className="heading__mini" data-aos="fade-up">
+                    Recent Works
+                </p>
+                <h1 className="heading__primary" data-aos="fade-up" data-aos-delay="80">
                     Featured <span className="text-yellow-300">Projects</span>
                 </h1>
             </div>

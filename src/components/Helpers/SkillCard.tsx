@@ -32,7 +32,6 @@ const SkillCard = ({ image, title }: Props) => {
         <div
             ref={cardRef}
             data-aos="flip-left"
-            data-aos-once="true"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={

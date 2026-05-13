@@ -116,19 +116,29 @@ const Skills = () => {
             <div className="mx-auto w-[90%] max-w-6xl">
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-[2fr_3fr]">
                     {/* Left — title, description, tabs */}
-                    <div className="flex flex-col" data-aos="fade-right" data-aos-once="true">
-                        <p className="heading__mini">Tech Stack</p>
-                        <h1 className="heading__primary">
+                    <div className="flex flex-col">
+                        <p className="heading__mini" data-aos="fade-up">
+                            Tech Stack
+                        </p>
+                        <h1 className="heading__primary" data-aos="fade-up" data-aos-delay="80">
                             Skills &amp; <span className="text-yellow-300">Expertise</span>
                         </h1>
-                        <p className="mt-4 text-[15px] leading-relaxed text-gray-400">
+                        <p
+                            className="mt-4 text-[15px] leading-relaxed text-gray-400"
+                            data-aos="fade-up"
+                            data-aos-delay="160"
+                        >
                             A curated set of technologies I&apos;ve worked with across backend,
                             frontend, AI tooling, and infrastructure — built through years of
                             real-world product delivery.
                         </p>
 
                         {/* Category tabs */}
-                        <div className="mt-8 flex flex-wrap gap-2">
+                        <div
+                            className="mt-8 flex flex-wrap gap-2"
+                            data-aos="fade-up"
+                            data-aos-delay="240"
+                        >
                             {tabs.map(tab => {
                                 const meta = categoryMeta[tab];
                                 const isActive = activeTab === tab;
@@ -155,7 +165,7 @@ const Skills = () => {
                     </div>
 
                     {/* Right — view toggle + content */}
-                    <div data-aos="fade-left" data-aos-once="true">
+                    <div data-aos="fade-up" data-aos-delay="200">
                         {/* Toggle */}
                         <div className="mb-4 flex justify-end">
                             <div className="flex overflow-hidden rounded-full border border-yellow-300/20 bg-yellow-300/5">

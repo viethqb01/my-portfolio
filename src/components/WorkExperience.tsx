@@ -69,8 +69,10 @@ const WorkExperience = () => {
 
             <div id="work-experience" className="bg-[#0e0f18] pb-[5rem] pt-[5rem]">
                 <div className="text-center">
-                    <p className="heading__mini">Career Path</p>
-                    <h1 className="heading__primary">
+                    <p className="heading__mini" data-aos="fade-up">
+                        Career Path
+                    </p>
+                    <h1 className="heading__primary" data-aos="fade-up" data-aos-delay="80">
                         Work <span className="text-yellow-300">Experience</span>
                     </h1>
                 </div>

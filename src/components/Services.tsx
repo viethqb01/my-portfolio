@@ -67,8 +67,10 @@ const Services = () => {
     return (
         <div id="blog-services" className="bg-[#100d17] pb-[5rem] pt-[5rem]">
             <div className="text-center">
-                <p className="heading__mini">Why Choose Me</p>
-                <h1 className="heading__primary">
+                <p className="heading__mini" data-aos="fade-up">
+                    Why Choose Me
+                </p>
+                <h1 className="heading__primary" data-aos="fade-up" data-aos-delay="80">
                     My <span className="text-yellow-300">Strengths</span>
                 </h1>
             </div>
@@ -77,6 +79,7 @@ const Services = () => {
             <p
                 className="mx-auto mt-6 max-w-2xl text-center text-[15px] leading-relaxed text-gray-400"
                 data-aos="fade-up"
+                data-aos-delay="160"
             >
                 Software Engineer with 6+ years of experience in fintech, full-stack development,
                 and AI integration. I build secure, scalable systems that handle real-world load —
@@ -87,6 +90,7 @@ const Services = () => {
             <div
                 className="mx-auto mt-12 grid w-[90%] max-w-3xl grid-cols-2 gap-4 md:grid-cols-4"
                 data-aos="fade-up"
+                data-aos-delay="240"
             >
                 {stats.map((stat, i) => (
                     <div
