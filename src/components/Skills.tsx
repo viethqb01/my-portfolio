@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useMemo, useState } from "react";
 
 import SkillCard from "./Helpers/SkillCard";
@@ -6,6 +8,16 @@ type Skill = {
     title: string;
     image: string;
     category: string;
+};
+
+const categoryMeta: Record<string, { label: string; emoji: string }> = {
+    All: { label: "All", emoji: "✦" },
+    BE: { label: "Backend", emoji: "⚙️" },
+    FE: { label: "Frontend", emoji: "🎨" },
+    AI: { label: "AI & Tools", emoji: "🤖" },
+    DevOps: { label: "DevOps", emoji: "🚀" },
+    Knowledge: { label: "Knowledge", emoji: "🧠" },
+    "Project stuffs": { label: "Project", emoji: "📋" },
 };
 
 const Skills = () => {
@@ -29,17 +41,14 @@ const Skills = () => {
 
             { title: "React", image: "/images/react.svg", category: "FE" },
             { title: "Next.js", image: "/images/next.png", category: "FE" },
-            // { title: "Angular", image: "/images/angular.png", category: "FE" },
-            // { title: "Vuejs", image: "/images/vue.svg", category: "FE" },
             { title: "Redux", image: "/images/redux.png", category: "FE" },
             { title: "Zustand", image: "/images/zustand.png", category: "FE" },
             { title: "SWR", image: "/images/swr.webp", category: "FE" },
-            { title: "React hook form", image: "/images/rhf.svg", category: "FE" },
+            { title: "React Hook Form", image: "/images/rhf.svg", category: "FE" },
             { title: "Tailwind CSS", image: "/images/tailwind.svg", category: "FE" },
             { title: "Shadcn", image: "/images/shadcn.png", category: "FE" },
-            { title: "Mui", image: "/images/mui.png", category: "FE" },
+            { title: "MUI", image: "/images/mui.png", category: "FE" },
             { title: "Bootstrap", image: "/images/bootstrap.svg", category: "FE" },
-            // { title: "Ng-zorro", image: "/images/ngzorro.svg", category: "FE" },
             { title: "Javascript", image: "/images/js.svg", category: "FE" },
             { title: "Typescript", image: "/images/ts.svg", category: "FE" },
             { title: "HTML", image: "/images/html.svg", category: "FE" },
@@ -54,36 +63,36 @@ const Skills = () => {
             { title: "Docker", image: "/images/docker.png", category: "DevOps" },
             { title: "RabbitMQ", image: "/images/rabitmq.png", category: "DevOps" },
             { title: "Kafka", image: "/images/kafka.webp", category: "DevOps" },
-            { title: "Github action", image: "/images/github-action.png", category: "DevOps" },
-            { title: "Gitlab CI CD", image: "/images/gitlab-ci-cd.png", category: "DevOps" },
-            { title: "Aws IAM", image: "/images/iam.png", category: "DevOps" },
-            { title: "Aws EC2", image: "/images/ec2.svg", category: "DevOps" },
-            { title: "Aws CDN", image: "/images/cdn.png", category: "DevOps" },
-            { title: "Aws S3", image: "/images/s3.png", category: "DevOps" },
+            { title: "Github Actions", image: "/images/github-action.png", category: "DevOps" },
+            { title: "Gitlab CI/CD", image: "/images/gitlab-ci-cd.png", category: "DevOps" },
+            { title: "AWS IAM", image: "/images/iam.png", category: "DevOps" },
+            { title: "AWS EC2", image: "/images/ec2.svg", category: "DevOps" },
+            { title: "AWS CDN", image: "/images/cdn.png", category: "DevOps" },
+            { title: "AWS S3", image: "/images/s3.png", category: "DevOps" },
             { title: "Jenkins", image: "/images/jenkin.png", category: "DevOps" },
             { title: "Consul", image: "/images/consul.png", category: "DevOps" },
             { title: "Sentry", image: "/images/sentry.svg", category: "DevOps" },
             { title: "Kibana", image: "/images/kibana.svg", category: "DevOps" },
 
-            { title: "Db.Singleton", image: "/images/singleton.png", category: "Knowledge" },
+            { title: "Singleton", image: "/images/singleton.png", category: "Knowledge" },
             {
-                title: "Db.Abstract factory",
+                title: "Abstract Factory",
                 image: "/images/abstract-factory.png",
                 category: "Knowledge",
             },
             {
-                title: "Db.Factory method",
+                title: "Factory Method",
                 image: "/images/factory-method.png",
                 category: "Knowledge",
             },
-            { title: "Db.Builder", image: "/images/builder.png", category: "Knowledge" },
-            { title: "Db.Facade", image: "/images/facade.png", category: "Knowledge" },
+            { title: "Builder", image: "/images/builder.png", category: "Knowledge" },
+            { title: "Facade", image: "/images/facade.png", category: "Knowledge" },
             { title: "Keycloak", image: "/images/keycloak.png", category: "Knowledge" },
             { title: "JWT", image: "/images/jwt.webp", category: "Knowledge" },
             { title: "Hashing", image: "/images/hashing.png", category: "Knowledge" },
             { title: "Encryption", image: "/images/encryption.svg", category: "Knowledge" },
             {
-                title: "Asymmetric Cryptography",
+                title: "Asymmetric Crypto",
                 image: "/images/asymmetric-cryptography.png",
                 category: "Knowledge",
             },
@@ -101,43 +110,52 @@ const Skills = () => {
     );
 
     return (
-        <div id="blog-skills" className="bg-black pb-12 pt-20">
-            <div className="mx-auto w-[80%]">
-                <div className="grid grid-cols-1 gap-8 lg:grid-cols-7">
-                    <div className="lg:col-span-3">
-                        <p className="heading__mini">My Skills</p>
-                        <h1 className="heading__primary mb-6">
-                            Let&apos;s Explore Popular Skills{" "}
-                            <span className="text-yellow-300">Skills</span> & Experience
+        <div id="blog-skills" className="bg-[#0b0c13] pb-[5rem] pt-[5rem]">
+            <div className="mx-auto w-[90%] max-w-6xl">
+                <div className="grid grid-cols-1 gap-12 lg:grid-cols-[2fr_3fr]">
+                    {/* Left — title, description */}
+                    <div className="flex flex-col" data-aos="fade-right">
+                        <p className="heading__mini">Tech Stack</p>
+                        <h1 className="heading__primary">
+                            Skills &amp; <span className="text-yellow-300">Expertise</span>
                         </h1>
-                        <p className="mb-6 text-[15px] text-white opacity-70">
-                            As someone who loves to experience new technologies, I have learned and
-                            had access to many programming languages and technologies that are very
-                            popular at the moment.
+                        <p className="mt-4 text-[15px] leading-relaxed text-gray-400">
+                            A curated set of technologies I&apos;ve worked with across backend,
+                            frontend, AI tooling, and infrastructure — built through years of
+                            real-world product delivery.
                         </p>
-                        <button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-red-500 font-semibold text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-blue-600 before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56">
-                            <span className="relative z-10">Learn More</span>
-                        </button>
+                        {/* Count */}
+                        <p className="mt-5 text-xs text-yellow-300/60">
+                            {filteredSkills.length} technologies
+                        </p>
                     </div>
 
-                    <div className="lg:col-span-4">
-                        <div className="mb-6 flex flex-wrap gap-4">
-                            {tabs.map(tab => (
-                                <button
-                                    key={tab}
-                                    className={`rounded-md px-4 py-2 font-medium transition-colors ${
-                                        activeTab === tab
-                                            ? "bg-yellow-300 text-black"
-                                            : "bg-gray-800 text-white hover:bg-gray-700"
-                                    }`}
-                                    onClick={() => setActiveTab(tab)}
-                                >
-                                    {tab}
-                                </button>
-                            ))}
+                    {/* Right — tabs + skill grid */}
+                    <div data-aos="fade-left">
+                        {/* Category tabs */}
+                        <div className="mb-5 flex flex-wrap gap-2">
+                            {tabs.map(tab => {
+                                const meta = categoryMeta[tab];
+                                const isActive = activeTab === tab;
+                                return (
+                                    <button
+                                        key={tab}
+                                        onClick={() => setActiveTab(tab)}
+                                        className={`flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-medium transition-all duration-300 ${
+                                            isActive
+                                                ? "border-yellow-300 bg-yellow-300 text-black shadow-[0_0_16px_rgba(253,224,71,0.3)]"
+                                                : "border-yellow-300/20 bg-yellow-300/5 text-gray-400 hover:border-yellow-300/40 hover:text-yellow-300"
+                                        }`}
+                                    >
+                                        <span className="text-xs">{meta.emoji}</span>
+                                        {meta.label}
+                                    </button>
+                                );
+                            })}
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6">
+                        {/* Skill grid */}
+                        <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
                             {filteredSkills.map(skill => (
                                 <SkillCard
                                     key={skill.title}
