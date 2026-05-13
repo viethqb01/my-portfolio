@@ -3,6 +3,7 @@
 import React, { useMemo, useState } from "react";
 
 import SkillCard from "./Helpers/SkillCard";
+import SkillSphere from "./Helpers/SkillSphere";
 
 type Skill = {
     title: string;
@@ -23,6 +24,7 @@ const categoryMeta: Record<string, { label: string; emoji: string }> = {
 const Skills = () => {
     const tabs = ["All", "BE", "FE", "AI", "DevOps", "Knowledge", "Project stuffs"];
     const [activeTab, setActiveTab] = useState("All");
+    const [viewMode, setViewMode] = useState<"sphere" | "list">("sphere");
 
     const skills: Skill[] = useMemo(
         () => [
@@ -113,8 +115,8 @@ const Skills = () => {
         <div id="blog-skills" className="bg-[#0b0c13] pb-[5rem] pt-[5rem]">
             <div className="mx-auto w-[90%] max-w-6xl">
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-[2fr_3fr]">
-                    {/* Left — title, description */}
-                    <div className="flex flex-col" data-aos="fade-right">
+                    {/* Left — title, description, tabs */}
+                    <div className="flex flex-col" data-aos="fade-right" data-aos-once="true">
                         <p className="heading__mini">Tech Stack</p>
                         <h1 className="heading__primary">
                             Skills &amp; <span className="text-yellow-300">Expertise</span>
@@ -124,16 +126,9 @@ const Skills = () => {
                             frontend, AI tooling, and infrastructure — built through years of
                             real-world product delivery.
                         </p>
-                        {/* Count */}
-                        <p className="mt-5 text-xs text-yellow-300/60">
-                            {filteredSkills.length} technologies
-                        </p>
-                    </div>
 
-                    {/* Right — tabs + skill grid */}
-                    <div data-aos="fade-left">
                         {/* Category tabs */}
-                        <div className="mb-5 flex flex-wrap gap-2">
+                        <div className="mt-8 flex flex-wrap gap-2">
                             {tabs.map(tab => {
                                 const meta = categoryMeta[tab];
                                 const isActive = activeTab === tab;
@@ -154,16 +149,83 @@ const Skills = () => {
                             })}
                         </div>
 
-                        {/* Skill grid */}
-                        <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
-                            {filteredSkills.map(skill => (
-                                <SkillCard
-                                    key={skill.title}
-                                    title={skill.title}
-                                    image={skill.image}
-                                />
-                            ))}
+                        <p className="mt-5 text-xs text-yellow-300/60">
+                            {filteredSkills.length} technologies
+                        </p>
+                    </div>
+
+                    {/* Right — view toggle + content */}
+                    <div data-aos="fade-left" data-aos-once="true">
+                        {/* Toggle */}
+                        <div className="mb-4 flex justify-end">
+                            <div className="flex overflow-hidden rounded-full border border-yellow-300/20 bg-yellow-300/5">
+                                <button
+                                    onClick={() => setViewMode("sphere")}
+                                    title="Sphere view"
+                                    className={`flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                                        viewMode === "sphere"
+                                            ? "bg-yellow-300 text-black"
+                                            : "text-gray-400 hover:text-yellow-300"
+                                    }`}
+                                >
+                                    <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="1.8"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    >
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                                        <path d="M2 12h20" />
+                                    </svg>
+                                    Sphere
+                                </button>
+                                <button
+                                    onClick={() => setViewMode("list")}
+                                    title="Grid view"
+                                    className={`flex items-center gap-1.5 px-4 py-2 text-sm font-medium transition-all duration-300 ${
+                                        viewMode === "list"
+                                            ? "bg-yellow-300 text-black"
+                                            : "text-gray-400 hover:text-yellow-300"
+                                    }`}
+                                >
+                                    <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="1.8"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    >
+                                        <rect x="3" y="3" width="7" height="7" rx="1" />
+                                        <rect x="14" y="3" width="7" height="7" rx="1" />
+                                        <rect x="3" y="14" width="7" height="7" rx="1" />
+                                        <rect x="14" y="14" width="7" height="7" rx="1" />
+                                    </svg>
+                                    Grid
+                                </button>
+                            </div>
                         </div>
+
+                        {viewMode === "sphere" ? (
+                            <SkillSphere skills={filteredSkills} />
+                        ) : (
+                            <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
+                                {filteredSkills.map(skill => (
+                                    <SkillCard
+                                        key={skill.title}
+                                        title={skill.title}
+                                        image={skill.image}
+                                    />
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

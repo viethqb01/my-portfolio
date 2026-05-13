@@ -67,7 +67,7 @@ const WorkExperience = () => {
                 }
             `}</style>
 
-            <div id="work-experience" className="bg-[#0b0c13] pb-[5rem] pt-[5rem]">
+            <div id="work-experience" className="bg-[#0e0f18] pb-[5rem] pt-[5rem]">
                 <div className="text-center">
                     <p className="heading__mini">Career Path</p>
                     <h1 className="heading__primary">

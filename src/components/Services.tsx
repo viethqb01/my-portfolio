@@ -65,7 +65,7 @@ const Services = () => {
     }, []);
 
     return (
-        <div id="blog-services" className="bg-[#0b0c13] pb-[5rem] pt-[5rem]">
+        <div id="blog-services" className="bg-[#100d17] pb-[5rem] pt-[5rem]">
             <div className="text-center">
                 <p className="heading__mini">Why Choose Me</p>
                 <h1 className="heading__primary">

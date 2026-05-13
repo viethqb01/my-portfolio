@@ -5,6 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+    background-color: #0b0c13;
+}
+
 @layer components {
     .nav__link {
         @apply relative block w-fit text-sm text-white after:absolute after:block after:h-[3px] after:w-full after:origin-right after:scale-x-0 after:bg-yellow-400 after:transition after:duration-300 after:content-[""] after:hover:scale-x-100;
