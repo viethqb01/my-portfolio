@@ -31,16 +31,17 @@ const Hero = () => {
                                 data-aos-delay="400"
                                 className="mt-[1.2rem] text-justify text-[14px] text-[#c4cfdf] md:text-[16px]"
                             >
-                                I am a Software Engineer with 6 years of experience, specializing in
-                                PHP and React, Next.js, and I am also able to work with Golang,
-                                Angular, and Vue.js. I have worked on developing complex systems
-                                such as payment gateways, e-wallets, POS solutions, and e-learning
-                                platforms. In addition, I am currently working as a freelancer,
-                                supporting various clients in building and developing their web
-                                projects. I am eager to work in a challenging environment that
-                                encourages continuous learning and personal growth, and I am
-                                passionate about building high-quality, scalable, and efficient
-                                solutions.
+                                Software Engineer with 6+ years of experience building and
+                                developing fintech systems, including payment gateways and e-wallet
+                                platforms. Proficient in PHP, Golang, React, and Next.js. Strong
+                                expertise in applying AI to products and systems, particularly with
+                                AI Agents, Skills, and Rules-based workflows to build intelligent
+                                automation solutions. Contributed to large-scale products with
+                                secure architectures, high-load capabilities, serving millions of
+                                users, and generating multi-million-dollar transaction revenue.
+                                Strong foundation in microservices, distributed systems, payment
+                                integration, and system optimization within highly scalable and
+                                high-availability environments.
                             </p>
                             <p
                                 data-aos="fade-up"

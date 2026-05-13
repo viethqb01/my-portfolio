@@ -9,7 +9,7 @@ type Skill = {
 };
 
 const Skills = () => {
-    const tabs = ["All", "BE", "FE", "DevOps", "Knowledge", "Project stuffs"];
+    const tabs = ["All", "BE", "FE", "AI", "DevOps", "Knowledge", "Project stuffs"];
     const [activeTab, setActiveTab] = useState("All");
 
     const skills: Skill[] = useMemo(
@@ -29,8 +29,8 @@ const Skills = () => {
 
             { title: "React", image: "/images/react.svg", category: "FE" },
             { title: "Next.js", image: "/images/next.png", category: "FE" },
-            { title: "Angular", image: "/images/angular.png", category: "FE" },
-            { title: "Vuejs", image: "/images/vue.svg", category: "FE" },
+            // { title: "Angular", image: "/images/angular.png", category: "FE" },
+            // { title: "Vuejs", image: "/images/vue.svg", category: "FE" },
             { title: "Redux", image: "/images/redux.png", category: "FE" },
             { title: "Zustand", image: "/images/zustand.png", category: "FE" },
             { title: "SWR", image: "/images/swr.webp", category: "FE" },
@@ -39,11 +39,17 @@ const Skills = () => {
             { title: "Shadcn", image: "/images/shadcn.png", category: "FE" },
             { title: "Mui", image: "/images/mui.png", category: "FE" },
             { title: "Bootstrap", image: "/images/bootstrap.svg", category: "FE" },
-            { title: "Ng-zorro", image: "/images/ngzorro.svg", category: "FE" },
+            // { title: "Ng-zorro", image: "/images/ngzorro.svg", category: "FE" },
             { title: "Javascript", image: "/images/js.svg", category: "FE" },
             { title: "Typescript", image: "/images/ts.svg", category: "FE" },
             { title: "HTML", image: "/images/html.svg", category: "FE" },
             { title: "CSS", image: "/images/css.svg", category: "FE" },
+
+            { title: "ChatGPT", image: "/images/chatgpt.png", category: "AI" },
+            { title: "Claude", image: "/images/claude.svg", category: "AI" },
+            { title: "Cursor", image: "/images/cursor.png", category: "AI" },
+            { title: "Agent Skill", image: "/images/skill.png", category: "AI" },
+            { title: "Rules", image: "/images/rule.jpg", category: "AI" },
 
             { title: "Docker", image: "/images/docker.png", category: "DevOps" },
             { title: "RabbitMQ", image: "/images/rabitmq.png", category: "DevOps" },

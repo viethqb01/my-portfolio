@@ -13,6 +13,7 @@ import NavMobile from "@/components/NavMobile";
 import Project from "@/components/Project";
 import Services from "@/components/Services";
 import Skills from "@/components/Skills";
+import WorkExperience from "@/components/WorkExperience";
 
 const HomePage = () => {
     const [showNav, setshowNav] = useState(false);
@@ -33,6 +34,7 @@ const HomePage = () => {
             <Hero />
             <About />
             <Skills />
+            <WorkExperience />
             <Services />
             <Project />
             <Footer />

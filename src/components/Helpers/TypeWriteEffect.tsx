@@ -17,10 +17,6 @@ const TypeWriteEffect = () => {
                     1000,
                     "a Golang Developer",
                     1000,
-                    "an Angular Developer",
-                    1000,
-                    "a VueJS Developer",
-                    1000,
                 ]}
                 wrapper="span"
                 speed={50}
